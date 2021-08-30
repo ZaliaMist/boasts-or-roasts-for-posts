@@ -1,0 +1,14 @@
+<h1>HELLOOOO Mrs. Form ;p </h1>
+<p>
+    <a href="/boasts/">Boasts |</a>
+    <a href="/roasts/">Roasts |</a>
+    <a href="/createpost/">Create Post |</a>
+    <a href="/sortby/">Sort by Votes</a>
+    <a href="/">home</a>
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit!">
+</form>

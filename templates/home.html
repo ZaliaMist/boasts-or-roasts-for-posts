@@ -1,0 +1,32 @@
+<header>
+
+<h1 id="greeting">&#128123 {{greeting}} &#128123</h1>
+
+<p>
+    <a href="/boasts/">Boasts |</a>
+    <a href="/roasts/">Roasts |</a>
+    <a href="/createpost/">Create Post |</a>
+    <a href="/sortby/">Sort by Votes</a>
+    <a href="/">home</a>
+
+</p>
+
+</header>
+
+<div>
+    {% for post in posts %}
+    <h3>Roast or Boast: {{post.boast}}</h3>
+    <p>Body: {{post.body}}</p>
+    <button><a href="/like/{{post.id}}/">Upvote</a></button>
+    <button><a href="/dislike/{{post.id}}/">Downvote</a></button>
+    <p>Total Votes: {{post.vote_holder}}</p>
+    <p>Time Posted: {{post.time}}</p>
+
+    {% endfor %}
+</div>
+
+<!-- {% for modelname in ModelForBoastsAndRoasts %}
+        <p>{{ ModelForBoastsAndRoasts.body }}</p>
+        <p>{{ ModelForBoastsAndRoasts.get_boast_display }}</p>
+{% endfor %} -->
+
