@@ -4,7 +4,7 @@ from ghost.forms import FormForBoastsAndRoasts
 
 def home_view(request):
     posts = ModelForBoastsAndRoasts.objects.all().order_by('-time')
-    return render(request, 'home.html', {'posts': posts}, greeting="Homepage")
+    return render(request, 'home.html', {'posts': posts})
 
 
 def boasts_view(request):
